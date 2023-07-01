@@ -40,7 +40,7 @@ body {
     color: white;
 }
 
-.panel-left {
+#panel-left {
     background-image:linear-gradient(0deg, white, white 28%, black 33%, black);
     border: 3px white solid;
     position: absolute;
@@ -52,25 +52,17 @@ body {
     height: 30%;
 }
 
-.panel-right {
+#panel-right {
     border: 3px white solid;
     position: absolute;
     margin-top: 9%;
     margin-left: 400px;
     width: 70%;
     height: 77%;
+    overflow: scroll;
 }
 
-.ddmenu {
-    position: absolute;
-    height: 30px;
-    width: 100px;
-    bottom: 20px;
-    left: 25%;
-    text-align: center;
-}
-
-.button {
+#button {
     position: absolute;
     height: 30px;
     width: 40px;
