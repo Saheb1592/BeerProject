@@ -62,7 +62,7 @@ body {
     overflow: scroll;
 }
 
-#button {
+#beerButton {
     position: absolute;
     height: 30px;
     width: 40px;
