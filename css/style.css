@@ -40,23 +40,40 @@ body {
     color: white;
 }
 
+#tagLiner {
+    position: absolute;
+    width: 36%;
+    height: 15%;
+    margin-top: 14px;
+    margin-left: 58%;
+}
+
 #panel-left {
     background-image:linear-gradient(0deg, white, white 80%, black 82%, black);
-    border: 3px white solid;
     position: absolute;
-    margin-top: 9%;
+    margin-top: 11%;
     margin-left: 30px;
     padding-left: 10px;
     padding-right: 10px;
     width: 20%;
-    height: 77%;
+    height: 70%;
+    box-shadow: 7px 7px 3px #161717;
+}
+
+#clipart {
+    position: absolute;
+    background-image: url("../img/beerclipart.png");
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    margin-top: 25%;
+    margin-left: 10%;
 }
 
 #panel-right {
-    border: 3px white solid;
     position: absolute;
-    margin-top: 9%;
-    margin-left: 400px;
+    margin-top: 11%;
+    margin-left: 440px;
     width: 70%;
     height: 77%;
     overflow: scroll;
@@ -66,7 +83,7 @@ body {
     position: absolute;
     height: 30px;
     width: 250px;
-    top: 125px;
+    top: 140px;
     left: 11%;
 }
 
@@ -85,6 +102,14 @@ body {
     position: absolute;
     height: 30px;
     width: 250px;
-    bottom: 20px;
+    bottom: 25px;
     left: 11%;
+}
+
+.quoter {
+    color: black;
+    font-style: italic;
+    font-family: cursive;
+    margin-top: 76px;
+    margin-left: 5px;
 }

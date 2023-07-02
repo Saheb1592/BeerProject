@@ -40,10 +40,11 @@ async function getBeer (){
             beerImgDiv1.style.marginRight = "70px";
             beerImgDiv1.style.marginTop = "50px";
         const image1 = document.createElement('img');
-            image1.style.height = "400px";
+            image1.style.height = "450px";
             image1.style.width = "200px";
         const foodPair1 = document.createElement("p");
             foodPair1.textContent = "Try it with: ";
+            foodPair1.style.marginTop = "60px";
         
         // api data as variable
         const nameElement1 = item.name;
@@ -151,4 +152,38 @@ function displaySelectedBeer() {
     rightPanel.append(beerImgDiv2);
     rightPanel.append(beerDiv2);
     rightPanel.style.color = "white";
+}
+
+/*
+    Third feature
+*/
+
+// variables
+const divTagLiner = document.getElementById("tagLiner");
+
+// page loads and then every 3 seconds the tagline changes
+window.addEventListener("load", () => {
+    setInterval(tagLiners, 3000);
+});
+
+// fetch api
+async function tagLiners (){
+    return fetch(randomBeerApiUrl)
+    .then(res => res.json())
+
+    // using tagliners as quotes
+    .then(randomTagLiner => {
+        divTagLiner.innerHTML = "";
+        for(const quote of randomTagLiner) {
+            const quoter = document.createElement("h3");
+            const quoteElement = quote.tagline;
+
+            // connecting js created element to css file
+            quoter.classList.add("quoter");
+
+            // appending the variables
+            quoter.append(quoteElement);
+            divTagLiner.append(quoter);
+        }
+    })
 }
