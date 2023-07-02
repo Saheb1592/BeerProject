@@ -1,3 +1,4 @@
+/* * used to reset the page margins */
 * {
     height: 100%;
     padding: 0;
@@ -8,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-.bgpic {
+.background {
     background-image: url("../img/bgpic.jpg");
     height: 100%;
     width: 100%;
@@ -106,6 +107,7 @@ body {
     left: 11%;
 }
 
+/* Connected to JS file - scroll to third feature */
 .quoter {
     color: black;
     font-style: italic;

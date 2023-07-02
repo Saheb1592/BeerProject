@@ -9,12 +9,20 @@
     </head>
 
     <body>
-        <div class="bgpic">
+
+        <!--All divs in background div. Position set to relative in CSS to place other divs adquately -->
+        <div class="background">
+
+            <!-- Blur filter for bgpic -->
             <div class="blurfilter"></div>
             <div class="title">
                 <h1><span class="white">BE</span>ER<span class="white">.</span></h1>
             </div>
+
+            <!-- Next to title; used for JS api -->
             <div id="tagLiner"></div>
+
+            <!-- Left panel which the button and drop down menu for JS api -->
             <div id="panel-left">
                 <p class="para-left"> Pick your next beer today!<br> <br>
                 <span class ="tiny"> This page uses Punk API.</span></p>
@@ -22,7 +30,10 @@
                 <select id="beerOption" value="">Select one from 25!</select>
             </div>
             <div id="clipart"></div>
+
+            <!-- Right panel where info from API is displayed -->
             <div id="panel-right"></div>
+
         </div>
         <script src="../js/project.js" type="module"></script>
     </body>

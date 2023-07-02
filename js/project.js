@@ -46,7 +46,7 @@ async function getBeer (){
             foodPair1.textContent = "Try it with: ";
             foodPair1.style.marginTop = "60px";
         
-        // api data as variable
+        // api data as variables
         const nameElement1 = item.name;
         const descElement1 = item.description;
         const tagLineElement1 = item.tagline;
@@ -81,7 +81,7 @@ const defaultOption = document.createElement("option");
 defaultOption.textContent = "Select one from 25!";
 beerList.appendChild(defaultOption);
 
-// data displayed as soon as page loads
+// data displayed as soon as page loads and selecting an option from drop down menu changes displayed info
 window.addEventListener("load", () => {
     getBeerList();
     beerList.addEventListener("change", displaySelectedBeer);
@@ -161,7 +161,7 @@ function displaySelectedBeer() {
 // variables
 const divTagLiner = document.getElementById("tagLiner");
 
-// page loads and then every 3 seconds the tagline changes
+// page loads and then every 3 seconds the tagline changes next to the title
 window.addEventListener("load", () => {
     setInterval(tagLiners, 3000);
 });
@@ -170,12 +170,17 @@ window.addEventListener("load", () => {
 async function tagLiners (){
     return fetch(randomBeerApiUrl)
     .then(res => res.json())
-
-    // using tagliners as quotes
     .then(randomTagLiner => {
+
+        // to clear previous tagline
         divTagLiner.innerHTML = "";
+
         for(const quote of randomTagLiner) {
+
+            // variable where selected info will be displayed
             const quoter = document.createElement("h3");
+
+            // api data as variable
             const quoteElement = quote.tagline;
 
             // connecting js created element to css file
